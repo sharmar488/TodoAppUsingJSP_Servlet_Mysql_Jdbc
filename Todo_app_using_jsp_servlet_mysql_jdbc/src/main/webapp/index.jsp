@@ -86,7 +86,7 @@
   <div class="header">
     <div>
 		<h1 style="padding-left:10px; padding-bottom: 20px;">TODO App</h1>
-		<a href="./index.jsp"><button class="lgn" name="login">Login </button></a>
+		  <a href="./index.jsp"><button class="lgn" name="login">Login </button></a>
 		<a href="./sign_in.jsp"><button class="sgn" name="sign">SignIn</button></a>
 	</div>
   </div>
@@ -96,13 +96,20 @@
       <!-- Login form content -->
       <h2>Login</h2>
       <form method="post"  action=login>
-        <input type="text" placeholder="Username" name="lname" required>
-        <input type="password" placeholder="Password" name="lpass" required>
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="password" placeholder="Password" name="password" required>
         <button type="submit">Login</button>
       </form>
     </div>
   </div>
-  
+  <% Boolean invalidUser = (Boolean) request.getAttribute("invalidUser"); %>
+
+<%-- Check if user is invalid and show an alert --%>
+<% if (invalidUser != null && invalidUser) { %>
+  <script>
+    alert("Invalid user. Please enter a valid username and password.");
+  </script>
+<% } %>
   <div class="footer">
     
   </div>

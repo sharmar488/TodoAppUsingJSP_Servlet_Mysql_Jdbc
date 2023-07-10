@@ -9,7 +9,7 @@ import com.demo.util.JDBCUtil;
 
 public class UserDao {
 	
-	public static int registerUser(User person) throws SQLException {
+	public int registerUser(User person) throws SQLException {
 		
 		Connection conn = JDBCUtil.getConnection();
 		PreparedStatement stmt = conn.prepareStatement("Insert into users(name,email,password) values(?,?,?)");

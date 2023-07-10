@@ -26,7 +26,10 @@ public class login extends HttpServlet {
 		ldao=new LoginDao();
 	}
 
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.sendRedirect("index.jsp");
+	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -37,8 +40,8 @@ public class login extends HttpServlet {
 
 
 	private void authenticate(HttpServletRequest request, HttpServletResponse response) {
-		String username=request.getParameter("lname");
-		String password=request.getParameter("lpass");
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
 		Login_User luser= new Login_User();
 		luser.setEmail(username);
 		luser.setPassword(password);
@@ -46,13 +49,15 @@ public class login extends HttpServlet {
 		if(ldao.validuser(luser))
 		{
 			System.out.println("User is valid!");
-			RequestDispatcher rd = request.getRequestDispatcher("todo-list.jsp"); 
+			request.getSession().setAttribute("username", username);
+			RequestDispatcher dispatcher=request.getRequestDispatcher("todos-list.jsp");
+			dispatcher.forward(request, response);
 		}else {
-			HttpSession session = request.getSession();
-            session.setAttribute("lname", username);
-            response.sendRedirect("index.jsp");
+			request.setAttribute("invalidUser", true);
+			RequestDispatcher dispatcher=request.getRequestDispatcher("index.jsp");
+			dispatcher.forward(request, response);
 			}
-		}catch (IOException e) {
+		}catch (IOException | ServletException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

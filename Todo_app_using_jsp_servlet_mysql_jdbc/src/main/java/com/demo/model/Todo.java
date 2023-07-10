@@ -2,6 +2,7 @@ package com.demo.model;
 
 import java.time.LocalDate;
 
+
 public class Todo {
 
     private int id;
@@ -25,13 +26,7 @@ public class Todo {
         this.status = isDone;
     }
 
-    public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    
 
 	public Todo(String title, String email, String description, LocalDate targetDate, boolean isDone) {
         super();
@@ -53,6 +48,13 @@ public class Todo {
     public String getTitle() {
         return title;
     }
+    public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
     public void setTitle(String title) {
         this.title = title;

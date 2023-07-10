@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 <style type="text/css">
 
  body{
@@ -61,8 +62,8 @@
 			<h2>Registration Form</h2>
 			<form method="post" action=sign_in>
 			<input type="text" name="name" placeholder="Name">
-			<input type="text" name="email" placeholder="Email">
-			<input type="password" name="pass" placeholder="Password">
+			<input type="text" name="username" placeholder="Email">
+			<input type="password" name="password" placeholder="Password">
 			<button type="submit">Register</button>
 			</form>
 		</div>
