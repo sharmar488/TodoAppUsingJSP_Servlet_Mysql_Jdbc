@@ -16,7 +16,7 @@
 ## 3) Homepage/Update/Delete/Read Operation
 ### Here you can see the current todo events specific to each individuals by clicking My Todos i.e READ operation.
 ### However if user want to make changes to the current todo they can click on edit button and update it. i.e UPDATE operation.
-### Furthermore user can delete the Todo if they want to. i.e DELETE operation
+### Furthermore user can delete the Todo if they want to by clicking delete button. i.e DELETE operation
 ![Todo_page](https://github.com/sharmar488/TodoAppUsingJSP_Servlet_Mysql_Jdbc/assets/108114441/02ca8c57-d88d-4808-b848-4d467660bcc7)
 
 ## 4) Todo Form/ Create Operation
