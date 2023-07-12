@@ -25,7 +25,7 @@
 
 ## 5) Edit Operation/ Update
 ### As you can see on the link itself that it is a GET Request to the already stored todo with its Id that retrieves it and allow you to update it. 
-![edit](https://github.com/sharmar488/TodoAppUsingJSP_Servlet_Mysql_Jdbc/assets/108114441/b451f59c-7bce-4b34-bc03-4185e2e3b906
+![edit](https://github.com/sharmar488/TodoAppUsingJSP_Servlet_Mysql_Jdbc/assets/108114441/b451f59c-7bce-4b34-bc03-4185e2e3b906)
 
 ## 6) Sign Out
 ### Last but not the least user can signout which leads back to the login page.
