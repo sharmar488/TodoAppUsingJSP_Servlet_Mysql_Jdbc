@@ -28,5 +28,5 @@
 ![edit](https://github.com/sharmar488/TodoAppUsingJSP_Servlet_Mysql_Jdbc/assets/108114441/b451f59c-7bce-4b34-bc03-4185e2e3b906)
 
 ## 6) Sign Out
-### Last but not the least user can signout which leads back to the login page.
+### Last but not the least user can signout by clicking SignOut button on the top right corner which leads back to the login page.
 
